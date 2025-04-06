@@ -1,0 +1,119 @@
+html, body {
+    height: 100vh;
+    width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow: hidden; 
+}
+
+h1 {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Calculator Container */
+.container {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 90vw; 
+    max-width: 320px; 
+}
+
+/* Input Field */
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #333;
+    outline: none;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.button {
+    padding: 15px;
+    font-size: 18px;
+    margin: 4px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgba(194, 126, 67, 0.893);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+.button:not(.special, .operator, .equal) {
+    background: linear-gradient(145deg, #74ebd5, #acb6e5);
+}
+
+.button:not(.special, .operator, .equal):hover {
+    background: linear-gradient(145deg, #acb6e5, #74ebd5);
+}
+
+.button.operator {
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+}
+
+.button.operator:hover {
+    background: linear-gradient(145deg, #fad0c4, #ff9a9e);
+}
+
+.button.special {
+    background: linear-gradient(145deg, #00c9ff, #92fe9d);
+}
+
+.button.special:hover {
+    background: linear-gradient(145deg, #92fe9d, #00c9ff);
+}
+
+.button.equal {
+    background: linear-gradient(145deg, #ff512f, #dd2476);
+    width: 130px;
+}
+
+.button.equal:hover {
+    background: linear-gradient(145deg, #dd2476, #ff512f);
+    transform: scale(1.15); 
+}
+
+@media (max-height: 500px) {
+    .container {
+        transform: scale(0.9);
+    }
+}
